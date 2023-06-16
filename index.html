@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/favicon.png">
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <!--WRAPPER WALA DIV-->
+  <div class="wrapper">
+
+      <!-- 1-heading -->
+      <h1>Weather App</h1>
+
+      <!-- 2-TAB WALA CONTAINER -->
+      <div class="tab-container">
+
+        <!-- 2.1-First TAB -->
+        <p class="tab" data-userWeather>Your Weather</p>
+        <!-- 2.2-Second TAB -->
+        <p class="tab" data-searchWeather>Search Weather</p>
+
+      </div>    <!--tab wala container div khatam-->
+
+      <!-- 3-WEATHER CONTAINER -->
+      <div class="weather-container">
+
+        <!-- 3.1-grant location container -->
+        <div class="sub-container grant-location-container">
+
+          <img src="./assets/location.png" alt="there is an image" width="80" height="80" loading="lazy">
+          <p>Grant Location Access</p>
+          <p>Allow Access to get weather Information</p>
+          <button class="btn" data-grantAccess>Grant Access</button>
+
+        </div>    <!--grant location container wala div-->
+
+        <!-- 3.2-Search Form -->
+        <form class="form-container" data-searchForm>
+
+          <input placeholder="Search for City..." data-searchInput>
+          <button class="btn">
+            <img src="./assets/search.png" type="submit" alt="search image" width="20" height="20" loading="lazy">
+          </button>
+
+        </form>
+
+        <!-- 3.3-loading screen container -->
+        <div class="sub-container loading-container">
+
+          <img src="./assets/loading.gif" alt="loading" width="150" height="150">
+          <p>Loading</p>
+
+        </div>     <!--loading screen container wala div khatam-->
+
+
+        <!-- 3.4-Show Weather Information-->
+        <div class="sub-container user-info-container">
+
+          <!-- 3.4.1-city name and flag -->
+          <div class="name">
+
+            <p data-cityName></p>
+            <img data-countryIcon>
+
+          </div>     <!-- city name and flag wala div khatam -->
+
+          <!-- 3.4.2-weather description -->
+          <p data-weatherDescription></p>
+
+          <!-- 3.4.3-weather icon -->
+          <img data-weatherIcon>
+
+          <!-- 3.4.4-temperature in degree celsius -->
+          <p data-temp></p>
+
+          <!-- 3.4.5-cards -- parameters -->
+          <div class="parameter-container">
+
+              <!-- card-1 -->
+              <div class="parameter">
+                <img src="./assets/wind.png" alt="wind">
+                <p>windspeed</p>
+                <p data-windspeed></p>
+              </div>
+
+              <!-- card-2 -->
+              <div class="parameter">
+                <img src="./assets/humidity.png" alt="humidity">
+                <p>humidity</p>
+                <p data-humidity></p>
+              </div>
+
+              <!-- card-3 -->
+              <div class="parameter">
+                <img src="./assets/cloud.png" alt="cloud">
+                <p>clouds</p>
+                <p data-cloudiness></p>
+              </div>
+
+          </div>
+
+        </div>
+
+        <!-- handle api fetch error -->
+        <!-- <div class="sub-container api-error-container">
+          <img src="./assets/not-found.png" data-notFoundImg />
+          <p data-apiErrorText></p>
+          <button class="btn" data-apiErrorBtn>Retry</button>
+        </div>     -->
+
+      </div>       <!--WEATHER CONTAINER WALA DIV KHATAM-->
+
+  </div>     <!--WRAPPER WALA DIV KHATAM-->
+
+
+  <!--link javaScript file-->
+  <script src="./index.js"></script>
+
+</body>
+</html>
